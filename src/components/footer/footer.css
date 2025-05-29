@@ -1,0 +1,102 @@
+.footer {
+	background: linear-gradient(145deg, #0f172a, #1a263a);
+	color: #e0f2f1;
+	padding: 4rem 2rem 2rem;
+	font-family: 'Inter', sans-serif;
+	backdrop-filter: blur(12px);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.footer-layout {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	text-align: center;
+}
+
+.footer-branding h2 {
+	font-size: 2rem;
+	color: #34d399; /* vert éco-friendly */
+	letter-spacing: 0.05em;
+	margin-bottom: 0.5rem;
+}
+
+.footer-branding p {
+	color: #94a3b8;
+	font-size: 1rem;
+	max-width: 320px;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+.footer-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.footer-nav a,
+.contact-footer-btn {
+	color: #e0f2f1;
+	text-decoration: none;
+	position: relative;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+}
+
+.footer-nav a::after,
+.contact-footer-btn::after {
+	content: "";
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #34d399;
+	transition: width 0.3s ease;
+}
+
+.footer-nav a:hover,
+.contact-footer-btn:hover {
+	color: #34d399;
+}
+
+.footer-nav a:hover::after,
+.contact-footer-btn:hover::after {
+	width: 100%;
+}
+
+.contact-footer-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	padding: 0;
+}
+
+.footer-bottom {
+	margin-top: 3rem;
+	text-align: center;
+	color: #64748b;
+	font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+	.footer-layout {
+		grid-template-columns: repeat(2, 1fr);
+		text-align: left;
+		align-items: flex-start;
+	}
+	.footer-branding {
+		text-align: left;
+	}
+}
+

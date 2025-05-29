@@ -1,0 +1,116 @@
+.modal-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display: grid;
+	place-items: center;
+	z-index: 1000;
+}
+
+.modal-content {
+	background: #1e1e2e;
+	padding: 2rem;
+	border-radius: 12px;
+	max-width: 500px;
+	width: 90%;
+	color: #f0f0f0;
+	position: relative;
+	box-shadow: 0 0 20px rgba(0, 227, 255, 0.3);
+}
+
+.modal-close {
+	position: absolute;
+	top: 0.8rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	color: #00e3ff;
+	cursor: pointer;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+input,
+textarea {
+	padding: 0.8rem;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	font-size: 1rem;
+	background: #2a2a3a;
+	color: #fff;
+}
+
+button[type="submit"] {
+	background-color: #00e3ff;
+	color: #1e1e2e;
+	padding: 0.8rem;
+	border: none;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button[disabled] {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+/* Loader */
+.loader {
+	width: 18px;
+	height: 18px;
+	border: 3px solid #fff;
+	border-top: 3px solid #00e3ff;
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+	display: inline-block;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+.modal-content {
+	animation: slideUpFade 0.4s ease-out;
+	transform-origin: bottom center;
+}
+
+@keyframes slideUpFade {
+	from {
+		opacity: 0;
+		transform: translateY(60px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+.success-message {
+	background-color: #2a2a3a;
+	padding: 1.5rem;
+	border-radius: 8px;
+	color: #00e3ff;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #00e3ff;
+	box-shadow: 0 0 10px rgba(0, 227, 255, 0.2);
+	animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Optionnel : animation d’apparition */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
