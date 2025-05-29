@@ -11,7 +11,7 @@ export const ContactForm = ({ onSubmit, loading }: ContactFormProps) => (
 		method="POST"
 	>
 		<input type="hidden" name="_captcha" value="false" />
-		<input type="hidden" name="_next" value="http://localhost:5173/" />
+		<input type="hidden" name="_next" value="https://wealthwink-strategies-v1.vercel.app/" />
 
 		<label htmlFor="name">Name</label>
 		<input id="name" name="name" type="text" placeholder="Your Name" required />
