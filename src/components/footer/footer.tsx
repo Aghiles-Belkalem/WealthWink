@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ContactModal } from "../ModalContact/ContactModal";
-import "./Footer.css";
+import "./footer.css";
 
 export default function Footer() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
